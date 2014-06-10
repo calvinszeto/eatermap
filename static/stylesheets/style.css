@@ -1,0 +1,15 @@
+html, body{
+	height: 100%;
+	margin: 0px;
+	padding: 0px
+}
+
+#map-canvas{
+	position: relative;
+	padding-bottom: 75%;
+	height: 0;
+}
+
+.row {
+	padding-bottom: 2%;	
+}

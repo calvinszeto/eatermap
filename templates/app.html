@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eater Mapper</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<link rel=stylesheet type='text/css' href="{{ url_for('static', filename='stylesheets/bootstrap.min.css') }}">
+	<link rel=stylesheet type='text/css' href="{{ url_for('static', filename='stylesheets/style.css') }}">
+	<script>
+		$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+	</script>
+	</script>
+	<script src="{{ url_for('static', filename='javascript/jquery-2.1.0.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='javascript/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" 
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoxUfm0UVU8vMbto7lXPKDDTD2BbAYFAI&sensor=false"></script>
+	<script src="{{ url_for('static', filename='javascript/map.js') }}"></script>
+	<script src="{{ url_for('static', filename='javascript/locator.js') }}"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>Search for Good Eats near:</h1>
+			<div class="input-group">
+				<input type=text class="form-control" name="address">
+				<span class="input-group-btn">
+					<button class="btn btn-default" id="locate" type="button">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+		<div class="row">
+			<div id="map-canvas"></div>
+		</div>
+	</div>
+</body>
+</html>
