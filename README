@@ -1,6 +1,7 @@
 Mapping the restaurants found on www.eater.com lists
 
 TODO:
+Implement app to use database
 Implement restaurants table
 Implement AJAX link between map markers and locations profile
 
