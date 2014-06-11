@@ -10,7 +10,8 @@ class Locator:
 
     def __init__(self, locations_file):
         with open(locations_file, "r") as f:
-            self._locations = json.JSONDecoder().decode(json.load(f))
+            #self._locations = json.JSONDecoder().decode(json.load(f))
+            self._locations = json.load(f)
 
     def _geocode(self, address):
         url = ("https://maps.googleapis.com/maps/api/geocode/json?"
